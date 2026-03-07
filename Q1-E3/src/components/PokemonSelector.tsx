@@ -6,7 +6,7 @@ interface PokemonSelectorProps {
 
 //1111??s
 const options = ['pikachu', 'charizard', 'gengar', 'squirtle', 'mewtwo']
-
+//1111??s
 export default function PokemonSelector({ onSelect }: PokemonSelectorProps) {
   return (
     <div>
