@@ -4,9 +4,8 @@ interface PokemonSelectorProps {
   onSelect: (name: string) => void
 }
 
-//1111??s
 const options = ['pikachu', 'charizard', 'gengar', 'squirtle', 'mewtwo']
-//1111??s
+
 export default function PokemonSelector({ onSelect }: PokemonSelectorProps) {
   return (
     <div>
@@ -16,21 +15,18 @@ export default function PokemonSelector({ onSelect }: PokemonSelectorProps) {
 
       <select
         id="pokemon-select"
-        onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
-          onSelect(e.target.value)
-        }
+        className="select-pokemon"
+        onChange={(e: React.ChangeEvent<HTMLSelectElement>) => onSelect(e.target.value)}
         defaultValue=""
       >
         <option value="" disabled>
           -- Select --
         </option>
-
         {options.map((name) => (
           <option key={name} value={name}>
             {name}
           </option>
-        ))}    
-
+        ))}
       </select>
     </div>
   )
